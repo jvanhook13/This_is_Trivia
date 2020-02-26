@@ -1,0 +1,10 @@
+What does my app need to do?
+    ASk question and display multiple choice answers
+    take an input 
+    check if correct or not
+    show if right or wrong for 5 seconds
+    switch to next question. 
+    End quiz at total time left = 0 
+    timer for each individual question
+    end screen to show results aka amount right vs wrong and time taken(?)
+    restart game on button click. 
