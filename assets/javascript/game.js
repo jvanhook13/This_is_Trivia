@@ -147,10 +147,10 @@ $(document).ready(function () {
             trivia: "What does the fox say?!",
             answer: "q",
             choices: {
-                a: "",
-                b: "",
-                c: "",
-                d: ""
+                a: "daa",
+                b: "baa",
+                c: "gaa",
+                d: "haa"
             }
 
 
@@ -162,16 +162,40 @@ $(document).ready(function () {
 
     console.log(question, "question")
     console.log(question[6].answer)
+    var i = 0 
     
-    function checkAnswer () {
+    function displayQuestion () {
+        
+          
+        console.log("question" , question[i].trivia) ;
+         
+        $("#question").text(question[i].trivia)
+        $(".choices").append(question[i].choices.a)
+        $(".choices").append(question[i].choices.b)
+        $(".choices").append(question[i].choices.c)
+        $(".choices").append(question[i].choices.d)
+         
 
-        question.forEach((element) => {
+    } ; 
+
+    function nextQuestion () {
+
+        if ($("#submit").on("click" , nextQuestion)) {
             
-        console.log("question" , element.trivia) ;
-        console.log("answer" , element.answer) ;
-        console.log("choices" , element.choices) ;
+            
 
-    })} ; 
+            console.log(i)
+            console.log(question[i].trivia)
+            i++
+        }
+    }
+    //     else if (setTimeout === 0) {
+    //         i++
+        
+            
+
+
+    // }}
 
     //     if (playerChoice === question.answer) {
 
@@ -185,7 +209,8 @@ $(document).ready(function () {
 
 
    
-        checkAnswer()
+        displayQuestion()
+        nextQuestion()
     
     // var choiceButton = question[i].choice[i]
 
