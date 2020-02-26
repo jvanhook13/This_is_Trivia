@@ -1,15 +1,16 @@
-$(document).ready(function game() {
+$(document).ready(function () {
     //declare variables/objects
     //Setting up object containing questions. Using const so it is immutable and question can never be changed cfrom this object.
-    const question = [{
-        //question 1
-            trivia1: "Dog goes?",
-            answer1: "Woof",
-            choices1: {
-                "a": "Toot",
-                "b": "Tweet",
-                "c": "Ow Ow Ow",
-                "d": "Woof"
+    const question = [
+        {
+            //question 1
+            trivia: "Dog goes?",
+            answer: "Woof",
+            choices: {
+                a: "Toot",
+                b: "Tweet",
+                c: "Ow Ow Ow",
+                d: "Woof"
             }
 
 
@@ -17,13 +18,13 @@ $(document).ready(function game() {
 
         {
             //question 2
-            trivia2: "Cat goes?",
-            answer2: "Meow",
-            choices2: {
-                "a": "Meow",
-                "b": "Squeek",
-                "c": "Woof",
-                "d": "Toot"
+            trivia: "Cat goes?",
+            answer: "Meow",
+            choices: {
+                a: "Meow",
+                b: "Squeek",
+                c: "Woof",
+                d: "Toot"
             }
 
 
@@ -31,13 +32,13 @@ $(document).ready(function game() {
 
         {
             //question 3
-            trivia3: "Bird goes?",
-            answer3: "Tweet",
-            choices3: {
-                "a": "Toot",
-                "b": "Woof",
-                "c": "Tweet",
-                "d": "Quack"
+            trivia: "Bird goes?",
+            answer: "Tweet",
+            choices: {
+                a: "Toot",
+                b: "Woof",
+                c: "Tweet",
+                d: "Quack"
             }
 
 
@@ -45,13 +46,13 @@ $(document).ready(function game() {
 
         {
             //question 4
-            trivia4: "Mouse Goes?",
-            answer4: "Squeek",
-            choices4: {
-                "a": "Toot",
-                "b": "Tweet",
-                "c": "Squeek",
-                "d": "Blub"
+            trivia: "Mouse Goes?",
+            answer: "Squeek",
+            choices: {
+                a: "Toot",
+                b: "Tweet",
+                c: "Squeek",
+                d: "Blub"
             }
 
 
@@ -59,13 +60,13 @@ $(document).ready(function game() {
 
         {
             //question 5
-            trivia5: "Cow goes?",
-            answer5: "Moo",
-            choices5: {
-                "a": "Quack",
-                "b": "Woof",
-                "c": "Moo",
-                "d": "Tweet"
+            trivia: "Cow goes?",
+            answer: "Moo",
+            choices: {
+                a: "Quack",
+                b: "Woof",
+                c: "Moo",
+                d: "Tweet"
             }
 
 
@@ -73,13 +74,13 @@ $(document).ready(function game() {
 
         {
             //question 6
-            trivia6: "Frog goes?",
-            answer6: "Croak",
-            choices6: {
-                "a": "Meow",
-                "b": "Squeek",
-                "c": "Croak",
-                "d": "Blub"
+            trivia: "Frog goes?",
+            answer: "Croak",
+            choices: {
+                a: "Meow",
+                b: "Squeek",
+                c: "Croak",
+                d: "Blub"
             }
 
 
@@ -87,13 +88,13 @@ $(document).ready(function game() {
 
         {
             //question 7
-            trivia7: "Elephant goes?",
-            answer7: "Toot",
-            choices7: {
-                "a": "Ow Ow Ow",
-                "b": "Squeek",
-                "c": "Woof",
-                "d": "Toot"
+            trivia: "Elephant goes?",
+            answer: "Toot",
+            choices: {
+                a: "Ow Ow Ow",
+                b: "Squeek",
+                c: "Woof",
+                d: "Toot"
             }
 
 
@@ -101,13 +102,13 @@ $(document).ready(function game() {
 
         {
             //question 8
-            trivia8: "Duck say?",
-            answer8: "Quack",
-            choices8: {
-                "a": "Moo",
-                "b": "Quack",
-                "c": "Squeek",
-                "d": "Blub"
+            trivia: "Duck say?",
+            answer: "Quack",
+            choices: {
+                a: "Moo",
+                b: "Quack",
+                c: "Squeek",
+                d: "Blub"
             }
 
 
@@ -115,13 +116,13 @@ $(document).ready(function game() {
 
         {
             //question 9
-            trivia9: "Fish go?",
-            answer9: "Blub",
-            choices9: {
-                "a": "Squeek",
-                "b": "Blub",
-                "c": "Quack",
-                "d": "Moo"
+            trivia: "Fish go?",
+            answer: "Blub",
+            choices: {
+                a: "Squeek",
+                b: "Blub",
+                c: "Quack",
+                d: "Moo"
             }
 
 
@@ -129,13 +130,13 @@ $(document).ready(function game() {
 
         {
             //question 10
-            trivia10: "The seal goes?",
-            answer10: "Ow Ow Ow",
-            choices10: {
-                "a": "Woof",
-                "b": "Meow",
-                "c": "Ow Ow Ow",
-                "d": "Croak"
+            trivia: "The seal goes?",
+            answer: "Ow Ow Ow",
+            choices: {
+                a: "Woof",
+                b: "Meow",
+                c: "Ow Ow Ow",
+                d: "Croak"
             }
 
 
@@ -143,26 +144,55 @@ $(document).ready(function game() {
 
         {
             //question 11
-            trivia11: "What does the fox say?!",
-            answer11: "",
-            choices11: {
-                "a": "",
-                "b": "",
-                "c": "",
-                "d": ""
+            trivia: "What does the fox say?!",
+            answer: "q",
+            choices: {
+                a: "",
+                b: "",
+                c: "",
+                d: ""
             }
 
 
-        },
+        }
 
 
 
-    ] ;
+    ];
 
-    console.log( question , "question")
-
-
+    console.log(question, "question")
+    console.log(question[6].answer)
     
+    function checkAnswer () {
+
+        question.forEach((element) => {
+            
+        console.log("question" , element.trivia) ;
+        console.log("answer" , element.answer) ;
+        console.log("choices" , element.choices) ;
+
+    })} ; 
+
+    //     if (playerChoice === question.answer) {
+
+    //         console.log(Correct)
+
+    //     } else {
+
+    //         console.log(Incorrect)
+
+    //     }
+
+
+   
+        checkAnswer()
+    
+    // var choiceButton = question[i].choice[i]
+
+   
+
+
+
 
 
 
