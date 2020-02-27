@@ -5,13 +5,13 @@ $(document).ready(function () {
         {
             //question 1
             trivia: "Dog goes?",
-            answer: "Woof",
-            choices: {
-                a: "Toot",
-                b: "Tweet",
-                c: "Ow Ow Ow",
-                d: "Woof"
-            }
+            answer: 3,
+            choices: [
+                "Toot",
+                "Tweet",
+                "Ow Ow Ow",
+                "Woof"
+            ]
 
 
         },
@@ -19,13 +19,13 @@ $(document).ready(function () {
         {
             //question 2
             trivia: "Cat goes?",
-            answer: "Meow",
-            choices: {
-                a: "Meow",
-                b: "Squeek",
-                c: "Woof",
-                d: "Toot"
-            }
+            answer: 0,
+            choices: [
+                 "Meow",
+                 "Squeek",
+                 "Woof",
+                 "Toot"
+            ]
 
 
         },
@@ -33,13 +33,13 @@ $(document).ready(function () {
         {
             //question 3
             trivia: "Bird goes?",
-            answer: "Tweet",
-            choices: {
-                a: "Toot",
-                b: "Woof",
-                c: "Tweet",
-                d: "Quack"
-            }
+            answer: 2,
+            choices: [
+                 "Toot",
+                 "Woof",
+                 "Tweet",
+                 "Quack"
+            ]
 
 
         },
@@ -47,13 +47,13 @@ $(document).ready(function () {
         {
             //question 4
             trivia: "Mouse Goes?",
-            answer: "Squeek",
-            choices: {
-                a: "Toot",
-                b: "Tweet",
-                c: "Squeek",
-                d: "Blub"
-            }
+            answer: 2,
+            choices: [
+                 "Toot",
+                 "Tweet",
+                 "Squeek",
+                 "Blub"
+            ]
 
 
         },
@@ -61,13 +61,13 @@ $(document).ready(function () {
         {
             //question 5
             trivia: "Cow goes?",
-            answer: "Moo",
-            choices: {
-                a: "Quack",
-                b: "Woof",
-                c: "Moo",
-                d: "Tweet"
-            }
+            answer: 2,
+            choices: [
+                 "Quack",
+                 "Woof",
+                 "Moo",
+                 "Tweet"
+            ]
 
 
         },
@@ -75,13 +75,13 @@ $(document).ready(function () {
         {
             //question 6
             trivia: "Frog goes?",
-            answer: "Croak",
-            choices: {
-                a: "Meow",
-                b: "Squeek",
-                c: "Croak",
-                d: "Blub"
-            }
+            answer: 2,
+            choices: [
+                 "Meow",
+                 "Squeek",
+                 "Croak",
+                 "Blub"
+            ]
 
 
         },
@@ -89,13 +89,13 @@ $(document).ready(function () {
         {
             //question 7
             trivia: "Elephant goes?",
-            answer: "Toot",
-            choices: {
-                a: "Ow Ow Ow",
-                b: "Squeek",
-                c: "Woof",
-                d: "Toot"
-            }
+            answer: 3,
+            choices: [
+                 "Ow Ow Ow",
+                 "Squeek",
+                 "Woof",
+                 "Toot"
+            ]
 
 
         },
@@ -103,13 +103,13 @@ $(document).ready(function () {
         {
             //question 8
             trivia: "Duck say?",
-            answer: "Quack",
-            choices: {
-                a: "Moo",
-                b: "Quack",
-                c: "Squeek",
-                d: "Blub"
-            }
+            answer: 1,
+            choices: [
+                 "Moo",
+                 "Quack",
+                 "Squeek",
+                 "Blub"
+            ]
 
 
         },
@@ -117,13 +117,13 @@ $(document).ready(function () {
         {
             //question 9
             trivia: "Fish go?",
-            answer: "Blub",
-            choices: {
-                a: "Squeek",
-                b: "Blub",
-                c: "Quack",
-                d: "Moo"
-            }
+            answer: 1,
+            choices: [
+                 "Squeek",
+                 "Blub",
+                 "Quack",
+                 "Moo"
+            ]
 
 
         },
@@ -131,13 +131,13 @@ $(document).ready(function () {
         {
             //question 10
             trivia: "The seal goes?",
-            answer: "Ow Ow Ow",
-            choices: {
-                a: "Woof",
-                b: "Meow",
-                c: "Ow Ow Ow",
-                d: "Croak"
-            }
+            answer: 2,
+            choices: [
+                 "Woof",
+                 "Meow",
+                 "Ow Ow Ow",
+                 "Croak"
+            ]
 
 
         },
@@ -146,12 +146,12 @@ $(document).ready(function () {
             //question 11
             trivia: "What does the fox say?!",
             answer: "q",
-            choices: {
-                a: "daa",
-                b: "baa",
-                c: "gaa",
-                d: "haa"
-            }
+            choices: [
+                 "daa",
+                 "baa",
+                 "gaa",
+                 "haa"
+            ]
 
 
         }
@@ -168,58 +168,35 @@ $(document).ready(function () {
         
           
         console.log("question" , question[i].trivia) ;
-         
+        //pushes the code to html
         $("#question").text(question[i].trivia)
-        $(".choices").append(question[i].choices.a)
-        $(".choices").append(question[i].choices.b)
-        $(".choices").append(question[i].choices.c)
-        $(".choices").append(question[i].choices.d)
-         
+        $(".choices").html(question[i].choices)
+
+        //gets all the choices from the question object
+        question.forEach(x => {
+
+            var t = x.choices
+            t.forEach(y => console.log(y))
+        
+        })
+
 
     } ; 
-
+    //function to iterate through the indexes of question
     function nextQuestion () {
-
-        if ($("#submit").on("click" , nextQuestion)) {
-            
-            
 
             console.log(i)
             console.log(question[i].trivia)
             i++
-        }
-    }
-    //     else if (setTimeout === 0) {
-    //         i++
         
-            
+    }
+    
 
-
-    // }}
-
-    //     if (playerChoice === question.answer) {
-
-    //         console.log(Correct)
-
-    //     } else {
-
-    //         console.log(Incorrect)
-
-    //     }
-
-
-   
         displayQuestion()
         nextQuestion()
+        //calls next question when you hit the submit button
+        $("#submit").on("click" , nextQuestion)
     
-    // var choiceButton = question[i].choice[i]
-
-   
-
-
-
-
-
 
     //functions to run game
 
