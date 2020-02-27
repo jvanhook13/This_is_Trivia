@@ -176,7 +176,7 @@ $(document).ready(function () {
         question.forEach(x => {
 
             var t = x.choices
-            t.forEach(y => console.log(y))
+            t.forEach(y => $())
         
         })
 
@@ -198,16 +198,17 @@ $(document).ready(function () {
         $("#submit").on("click" , nextQuestion)
     
 
-    //functions to run game
-
-
-
-
-
-
-    //functions to count wins/losses
-
-    // restart();
+//need a function to set up the interval for the program
+//need to set up a timer
+//need a timer of 45 seconds per question
+//need to add hyperlink to question 11 no matter the answer to play what does the fox say
+//need a counter for correct and incorrect answers
+//need a function to count said correct incorrect
+//correctly display choices per question
+//need to make all choices into clickable/selectable elements
+//get question html to update when submit is clicked or time === 0 
+//need a game start function
+//need a reset function
 
 
 
